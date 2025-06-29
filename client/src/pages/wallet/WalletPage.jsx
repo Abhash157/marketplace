@@ -5,6 +5,7 @@ import {
   faArrowUp, faArrowDown, faPlus, faCoins, 
   faExchangeAlt, faShoppingCart, faGift, faInfoCircle 
 } from '@fortawesome/free-solid-svg-icons';
+import AddFundsModal from '../../components/wallet/AddFundsModal';
 import Sidebar from '../../components/layout/Sidebar';
 import Header from '../../components/layout/Header';
 
@@ -21,6 +22,7 @@ const WalletPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('all');
   const [selectedWallet, setSelectedWallet] = useState(null);
+  const [isAddFundsModalOpen, setIsAddFundsModalOpen] = useState(false);
   const navigate = useNavigate();
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -53,7 +55,30 @@ const WalletPage = () => {
   }, []);
 
   const handleAddFunds = () => {
-    alert('Add funds functionality will be implemented here');
+    setIsAddFundsModalOpen(true);
+  };
+
+  const handleFundsAdded = (amount, walletId) => {
+    // Update the wallet balance
+    const wallet = nepaliWalletsMock.find(w => w.id === walletId);
+    if (wallet) {
+      wallet.balance += amount;
+      
+      // Add a new transaction
+      const newTransaction = {
+        id: Date.now(),
+        amount: amount,
+        type: 'credit',
+        description: `Funds added via ${wallet.name}`,
+        date: new Date().toISOString(),
+        category: 'deposit'
+      };
+      
+      setTransactions(prev => [newTransaction, ...prev]);
+      setBalance(prev => prev + amount);
+      
+      alert(`Successfully added NPR ${amount.toFixed(2)} to your ${wallet.name} wallet`);
+    }
   };
 
   const formatDate = (dateString) => {
@@ -106,6 +131,11 @@ const WalletPage = () => {
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       <div className={`flex-1 flex flex-col transition-all duration-300 ${sidebarOpen ? 'ml-0' : 'md:ml-64'}`}>
         <Header toggleSidebar={toggleSidebar} />
+        <AddFundsModal 
+          isOpen={isAddFundsModalOpen}
+          onClose={() => setIsAddFundsModalOpen(false)}
+          onAddFunds={handleFundsAdded}
+        />
 
         <main className="flex-1 overflow-y-auto p-4 md:p-6 max-w-7xl mx-auto w-full">
           {/* Main Wallet */}
