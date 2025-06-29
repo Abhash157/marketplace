@@ -80,7 +80,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <div className="px-4 mb-6">
             <h3 className="sidebar-text text-xs uppercase font-semibold text-gray-500 mb-2">Startup Tools</h3>
             <Link 
-              to="/register-startup" 
+              to="/registerStartup" 
               className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/register-startup')}`}
             >
               <FontAwesomeIcon icon={faRocket} className="w-5 text-center" />
