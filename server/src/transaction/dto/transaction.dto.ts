@@ -4,14 +4,14 @@ export class TransactionDto {
   @ApiProperty({ description: 'Transaction ID' })
   id: string;
 
-  @ApiProperty({ description: 'Sender user ID' })
-  senderId: string;
-
-  @ApiProperty({ description: 'Recipient user ID' })
-  receiverId: string;
+  @ApiProperty({ description: 'Wallet ID' })
+  walletId: string;
 
   @ApiProperty({ description: 'Transaction amount' })
   amount: number;
+
+  @ApiProperty({ description: 'Transaction description' })
+  description: string;
 
   @ApiProperty({ description: 'Transaction timestamp' })
   createdAt: Date;
@@ -19,7 +19,7 @@ export class TransactionDto {
   @ApiProperty({ 
     description: 'Transaction type',
     enum: ['DEBIT', 'CREDIT'],
-    required: false 
+    required: true 
   })
-  type?: 'DEBIT' | 'CREDIT';
+  type: 'DEBIT' | 'CREDIT';
 }

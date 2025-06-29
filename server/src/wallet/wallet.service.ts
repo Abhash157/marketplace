@@ -17,7 +17,7 @@ export class WalletService {
     }
 
     // Then create wallet
-    return this.prisma.wallet.create({
+    const wallet = await this.prisma.wallet.create({
       data: {
         user: {
           connect: { id: userId },
@@ -25,6 +25,13 @@ export class WalletService {
         balance: 0,
       },
     });
+
+    return {
+      id: wallet.id,
+      balance: wallet.balance,
+      userId: wallet.userId,
+      createdAt: wallet.createdAt,
+    };
   }
 
   async getWalletByUserId(userId: string): Promise<WalletDto> {
@@ -37,7 +44,13 @@ export class WalletService {
       throw new NotFoundException('Wallet not found');
     }
 
-    return userWithWallet.wallet;
+    const wallet = userWithWallet.wallet;
+    return {
+      id: wallet.id,
+      balance: wallet.balance,
+      userId: wallet.userId,
+      createdAt: wallet.createdAt,
+    };
   }
 
   async topUp(userId: string, amount: number): Promise<WalletDto> {
@@ -66,6 +79,12 @@ export class WalletService {
       throw new NotFoundException('Wallet not found');
     }
 
-    return userWithWallet.wallet;
+    const wallet = userWithWallet.wallet;
+    return {
+      id: wallet.id,
+      balance: wallet.balance,
+      userId: wallet.userId,
+      createdAt: wallet.createdAt,
+    };
   }
 }

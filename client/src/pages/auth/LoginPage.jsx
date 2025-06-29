@@ -7,7 +7,7 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const LoginPage = () => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
-    
+
     try {
       await login(email, password);
       navigate('/dashboard');
@@ -28,101 +28,85 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-            Sign in to your account
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Or{' '}
-            <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
-              create a new account
-            </Link>
-          </p>
-        </div>
-        
-        {error && (
-          <div className="bg-red-50 border-l-4 border-red-400 p-4">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-red-700">{error}</p>
-              </div>
-            </div>
-          </div>
-        )}
-        
-        <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-          <div className="rounded-md shadow-sm -space-y-px">
-            <div>
-              <label htmlFor="email-address" className="sr-only">
-                Email address
-              </label>
-              <input
-                id="email-address"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div>
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </div>
+    <div className="min-h-screen flex">
+      {/* Left Side - Login Form */}
+      <div className="w-full md:w-1/2 bg-white flex items-center justify-center p-8">
+        <div className="max-w-md w-full">
+          <div className="flex items-center mb-6">
+            <img src="/assets/logo.png" alt="Logo" className="h-10 mr-2" />
+            <h1 className="text-2xl font-bold text-indigo-700">Tech Connect</h1>
           </div>
 
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <input
-                id="remember-me"
-                name="remember-me"
-                type="checkbox"
-                className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-              />
-              <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
-                Remember me
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-2">Welcome Back</h2>
+
+          <button
+            className="w-full py-2 mb-4 border flex items-center justify-center space-x-2 border-gray-300 rounded-md text-sm hover:bg-gray-100"
+            onClick={() => alert('Google login coming soon!')}
+          >
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" className="w-5 h-5" alt="Google" />
+            <span>Log in with Google</span>
+          </button>
+
+          <div className="text-center text-gray-400 text-sm mb-4">or login with email</div>
+
+          {error && (
+            <div className="bg-red-100 text-red-700 p-3 rounded mb-4 text-sm">
+              {error}
+            </div>
+          )}
+
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500"
+            />
+            <input
+              type="password"
+              placeholder="Your Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-2 border rounded-md text-sm focus:ring-2 focus:ring-indigo-500"
+            />
+
+            <div className="flex items-center justify-between text-sm">
+              <label className="flex items-center">
+                <input type="checkbox" className="mr-2" />
+                Keep me logged in
               </label>
+              <a href="#" className="text-indigo-600 hover:underline">Forgot password?</a>
             </div>
 
-            <div className="text-sm">
-              <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                Forgot your password?
-              </a>
-            </div>
-          </div>
-
-          <div>
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full py-2 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md text-sm font-medium disabled:opacity-50"
             >
-              {isLoading ? 'Signing in...' : 'Sign in'}
+              {isLoading ? 'Signing in...' : 'Log in'}
             </button>
-          </div>
-        </form>
+          </form>
+
+          <p className="mt-4 text-center text-sm text-gray-600">
+            Don’t have an account?{' '}
+            <Link to="/register" className="text-indigo-600 hover:underline">Sign up</Link>
+          </p>
+        </div>
+      </div>
+
+      {/* Right Side - Illustration */}
+      <div className="hidden md:flex w-1/2 bg-gradient-to-tr from-blue-100 to-indigo-200 items-center justify-center p-8 relative">
+        <div className="max-w-md text-center">
+          <img src="/assets/illustration.jpg" alt="Login illustration" className="w-full mb-6" />
+          <h3 className="text-xl font-bold text-indigo-900 mb-2">New Update Available</h3>
+          <p className="text-gray-700 text-sm mb-4">We have added some new awesome features</p>
+          <button className="px-4 py-2 bg-white text-indigo-700 border border-indigo-700 rounded hover:bg-indigo-50 text-sm">
+            Learn More
+          </button>
+        </div>
       </div>
     </div>
   );

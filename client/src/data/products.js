@@ -1,13 +1,12 @@
 export const featuredProducts = [
-  {
+ {
     id: 1,
     name: "Reusable Bamboo Bottle",
     company: "EcoBags",
     price: 24.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["Eco-friendly"],
-    description: "Eco-friendly bamboo water bottle with stainless steel interior. Keeps drinks cold for 24 hours and hot for 12 hours. 100% biodegradable and sustainable."
+     image: "/assets/products/one.jpg",
+    tags: ["Eco-friendly"]
   },
   {
     id: 2,
@@ -15,8 +14,8 @@ export const featuredProducts = [
     company: "TechGadgets",
     price: 59.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    description: "Premium wireless earbuds with noise cancellation and 30-hour battery life. Perfect for students on the go."
+    image: "/assets/products/two.jpg",
+    tags: ["Tech", "Audio"]
   },
   {
     id: 3,
@@ -24,9 +23,8 @@ export const featuredProducts = [
     company: "GreenStyle",
     price: 18.99,
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    tags: ["Eco-friendly"],
-    description: "Stylish and durable organic cotton tote bag. Perfect alternative to plastic bags with reinforced handles."
+    image: "/assets/products/3-min.jpg",
+    tags: ["Bags", "Eco-friendly"]
   },
   {
     id: 4,
@@ -34,8 +32,8 @@ export const featuredProducts = [
     company: "RetroTech",
     price: 89.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-    description: "Fully restored vintage film camera with modern features. Perfect for photography enthusiasts."
+    image: "/assets/products/4-min.jpg",
+    tags: ["Camera"]
   },
   {
     id: 5,
@@ -43,8 +41,8 @@ export const featuredProducts = [
     company: "GreenStationery Co.",
     price: 14.99,
     rating: 4.5,
-    image: "https://i.etsystatic.com/26294788/r/il/bf7565/3057133752/il_570xN.3057133752_600r.jpg",
-    description: "A set of recycled paper notebooks perfect for eco-conscious students and professionals."
+    image: "/assets/products/4-min.jpg",
+    tags: ["Stationery", "Eco-friendly"]
   },
   {
     id: 6,
@@ -52,8 +50,8 @@ export const featuredProducts = [
     company: "BrightLite",
     price: 29.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80",
-    description: "Adjustable LED desk lamp with touch controls and multiple brightness settings."
+    image: "/assets/products/5-min.jpg",
+    tags: ["Lighting", "Study"]
   },
   {
     id: 7,
@@ -61,8 +59,8 @@ export const featuredProducts = [
     company: "SoundZen",
     price: 59.99,
     rating: 4.8,
-    image: "https://cdn.mos.cms.futurecdn.net/PbBRJvxoAm4BM7vfhh8ZfG.jpg",
-    description: "Wireless earbuds with active noise cancellation for focused studying or commuting."
+    image: "/assets/products/7-min.jpg",
+    tags: ["Audio"]
   },
   {
     id: 8,
@@ -70,18 +68,17 @@ export const featuredProducts = [
     company: "EcoInk",
     price: 9.99,
     rating: 4.3,
-    image: "https://static-01.daraz.com.np/p/ce2c134a431531b3e204777732770fac.png",
-    description: "Sustainable pen set made from bamboo, refillable and stylish."
+    image: "/assets/products/8-min.png",
+    tags: ["Stationery", "Eco-friendly"]
   },
- 
   {
     id: 9,
     name: "Portable Whiteboard Kit",
     company: "ThinkBoard",
     price: 24.99,
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/618A0OmuIFL._AC_SL1500_.jpg",
-    description: "Compact whiteboard set with markers and eraser — great for brainstorming on the go."
+    image: "/assets/products/9-min.jpg",
+    tags: ["Study"]
   },
   {
     id: 10,
@@ -89,8 +86,8 @@ export const featuredProducts = [
     company: "TimeTrek",
     price: 17.99,
     rating: 4.2,
-    image: "https://hackaday.com/wp-content/uploads/2021/10/pomodoro-800.png?w=800",
-    description: "Minimalist timer clock designed for Pomodoro technique and focused study sessions."
+    image: "/assets/products/10.jpg",
+    tags: ["Timer", "Study"]
   },
   {
     id: 11,
@@ -98,18 +95,17 @@ export const featuredProducts = [
     company: "CampusThreads",
     price: 39.99,
     rating: 4.7,
-    image: "https://i.etsystatic.com/28034476/r/il/f3144d/5505635872/il_fullxfull.5505635872_7fdc.jpg",
-    description: "High-quality, customizable college hoodie with soft fleece and stylish fit."
+    image: "/assets/products/11-min.jpg",
+    tags: ["Clothing"]
   },
-
   {
     id: 12,
     name: "Mini Solar Power Bank",
     company: "SunCharge",
     price: 22.99,
     rating: 4.5,
-    image: "https://images-cdn.ubuy.com.sa/634004b13bc2bd6a95629d4b-ubuy-online-shopping.jpg",
-    description: "Compact solar-powered power bank ideal for students on the move or during load-shedding."
+    image: "/assets/products/12-min.jpg",
+    tags: ["Tech", "Power"]
   },
   {
     id: 13,
@@ -117,8 +113,8 @@ export const featuredProducts = [
     company: "SitWell",
     price: 129.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1585559602038-35057c43fefb?auto=format&fit=crop&w=500&q=80",
-    description: "Comfortable, posture-supporting chair perfect for long study sessions."
+    image: "/assets/products/Ergonomic Study Chair-min.jpeg",
+    tags: ["Furniture", "Study"]
   },
   {
     id: 14,
@@ -126,8 +122,8 @@ export const featuredProducts = [
     company: "CraftEssence",
     price: 12.49,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1611078489795-5c7f1e88eab6?auto=format&fit=crop&w=500&q=80",
-    description: "Stylish handmade pencil case with natural fabrics and secure zip closure."
+    image: "/assets/products/Handmade Pencil Case-min.jpg",
+    tags: ["Stationery", "Bags"]
   },
   {
     id: 15,
@@ -135,18 +131,17 @@ export const featuredProducts = [
     company: "InspireSpace",
     price: 9.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1587574293340-b9d9b8438453?auto=format&fit=crop&w=500&q=80",
-    description: "Set of 5 vibrant posters to keep your motivation high while studying."
+    image: "/assets/products/Motivational Wall Posters.jpg",
+    tags: ["Decor"]
   },
-  
   {
     id: 17,
     name: "Laptop Cooling Pad",
     company: "CoolTech",
     price: 25.99,
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1587202372775-9890ef238fb1?auto=format&fit=crop&w=500&q=80",
-    description: "USB-powered cooling pad to keep your laptop cool during heavy tasks."
+    image: "/assets/products/Laptop Cooling Pad-min-1.jpg",
+    tags: ["Tech"]
   },
   {
     id: 18,
@@ -154,8 +149,8 @@ export const featuredProducts = [
     company: "TidyDesk",
     price: 6.99,
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1581089781785-603411fa81f5?auto=format&fit=crop&w=500&q=80",
-    description: "Keep all your charging cables and wires neatly organized on your desk."
+    image: "/assets/products/Cord Organizer Clips.jpg",
+    tags: ["Organizer"]
   },
   {
     id: 19,
@@ -163,8 +158,8 @@ export const featuredProducts = [
     company: "NoteNest",
     price: 4.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1583416759374-a394d7ddbcc5?auto=format&fit=crop&w=500&q=80",
-    description: "Multicolor sticky notes for quick reminders, study marks, and creative ideas."
+    image: "/assets/products/Sticky Note Set-min.jpg",
+    tags: ["Stationery"]
   },
   {
     id: 20,
@@ -172,8 +167,8 @@ export const featuredProducts = [
     company: "FlexHold",
     price: 7.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1598327105662-845c1e64c5d3?auto=format&fit=crop&w=500&q=80",
-    description: "Compact and foldable phone stand ideal for online classes or video calls."
+    image: "/assets/products/Portable Phone Stand-min.jpg",
+    tags: ["Accessories"]
   },
   {
     id: 21,
@@ -181,8 +176,8 @@ export const featuredProducts = [
     company: "SmartCards",
     price: 11.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1599064656878-90afba9e81f6?auto=format&fit=crop&w=500&q=80",
-    description: "Reusable flashcards to boost memory and help with exam preparation."
+    image: "/assets/products/Academic Flashcards Set.jpg",
+    tags: ["Study"]
   },
   {
     id: 22,
@@ -190,8 +185,8 @@ export const featuredProducts = [
     company: "UniBox",
     price: 49.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1592928303705-7f847b27a4e3?auto=format&fit=crop&w=500&q=80",
-    description: "Starter kit with all must-haves for new hostel students — bedding, toiletries, and more."
+    image: "/assets/products/Hostel Essentials Kit-min.jpg",
+    tags: ["Accessories"]
   },
   {
     id: 23,
@@ -199,8 +194,8 @@ export const featuredProducts = [
     company: "CareerBoost",
     price: 5.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=500&q=80",
-    description: "Downloadable, professional resume templates to make a great first impression."
+    image: "/assets/products/Wireless mouse-min.jpg",
+    tags: ["Tech"]
   },
   {
     id: 24,
@@ -208,8 +203,8 @@ export const featuredProducts = [
     company: "BrightBeam",
     price: 8.49,
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1587033851617-74a976e3f888?auto=format&fit=crop&w=500&q=80",
-    description: "Flexible and portable USB-powered light perfect for late-night studying."
+    image: "/assets/products/USB Reading Light.jpg",
+    tags: ["Lighting", "Study"]
   },
   {
     id: 25,
@@ -217,7 +212,7 @@ export const featuredProducts = [
     company: "ClearWave",
     price: 49.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1580894908360-7b1b71db10f6?auto=format&fit=crop&w=500&q=80",
-    description: "Over-ear headphones designed to block distractions and enhance focus."
+    image: "/assets/products/Noise-Isolating Headphones.jpg",
+    tags: ["Audio"]
   }
 ];

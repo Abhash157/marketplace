@@ -84,7 +84,7 @@ const BrowsePage = () => {
     company: "EcoInk",
     price: 9.99,
     rating: 4.3,
-    image: "/assets/products/8-min.jpg",
+    image: "/assets/products/8-min.png",
     tags: ["Stationery", "Eco-friendly"]
   },
   {
@@ -93,7 +93,7 @@ const BrowsePage = () => {
     company: "ThinkBoard",
     price: 24.99,
     rating: 4.6,
-    image: "https://m.media-amazon.com/images/I/618A0OmuIFL._AC_SL1500_.jpg",
+    image: "/assets/products/9-min.jpg",
     tags: ["Study"]
   },
   {
@@ -102,7 +102,7 @@ const BrowsePage = () => {
     company: "TimeTrek",
     price: 17.99,
     rating: 4.2,
-    image: "https://hackaday.com/wp-content/uploads/2021/10/pomodoro-800.png?w=800",
+    image: "/assets/products/10.jpg",
     tags: ["Timer", "Study"]
   },
   {
@@ -111,7 +111,7 @@ const BrowsePage = () => {
     company: "CampusThreads",
     price: 39.99,
     rating: 4.7,
-    image: "https://i.etsystatic.com/28034476/r/il/f3144d/5505635872/il_fullxfull.5505635872_7fdc.jpg",
+    image: "/assets/products/11-min.jpg",
     tags: ["Clothing"]
   },
   {
@@ -120,7 +120,7 @@ const BrowsePage = () => {
     company: "SunCharge",
     price: 22.99,
     rating: 4.5,
-    image: "https://images-cdn.ubuy.com.sa/634004b13bc2bd6a95629d4b-ubuy-online-shopping.jpg",
+    image: "/assets/products/12-min.jpg",
     tags: ["Tech", "Power"]
   },
   {
@@ -129,7 +129,7 @@ const BrowsePage = () => {
     company: "SitWell",
     price: 129.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1585559602038-35057c43fefb?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Ergonomic Study Chair-min.jpeg",
     tags: ["Furniture", "Study"]
   },
   {
@@ -138,7 +138,7 @@ const BrowsePage = () => {
     company: "CraftEssence",
     price: 12.49,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1611078489795-5c7f1e88eab6?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Handmade Pencil Case-min.jpg",
     tags: ["Stationery", "Bags"]
   },
   {
@@ -147,7 +147,7 @@ const BrowsePage = () => {
     company: "InspireSpace",
     price: 9.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1587574293340-b9d9b8438453?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Motivational Wall Posters.jpg",
     tags: ["Decor"]
   },
   {
@@ -156,7 +156,7 @@ const BrowsePage = () => {
     company: "CoolTech",
     price: 25.99,
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1587202372775-9890ef238fb1?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Laptop Cooling Pad-min-1.jpg",
     tags: ["Tech"]
   },
   {
@@ -165,7 +165,7 @@ const BrowsePage = () => {
     company: "TidyDesk",
     price: 6.99,
     rating: 4.3,
-    image: "https://images.unsplash.com/photo-1581089781785-603411fa81f5?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Cord Organizer Clips.jpg",
     tags: ["Organizer"]
   },
   {
@@ -174,7 +174,7 @@ const BrowsePage = () => {
     company: "NoteNest",
     price: 4.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1583416759374-a394d7ddbcc5?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Sticky Note Set-min.jpg",
     tags: ["Stationery"]
   },
   {
@@ -183,7 +183,7 @@ const BrowsePage = () => {
     company: "FlexHold",
     price: 7.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1598327105662-845c1e64c5d3?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Portable Phone Stand-min.jpg",
     tags: ["Accessories"]
   },
   {
@@ -192,7 +192,7 @@ const BrowsePage = () => {
     company: "SmartCards",
     price: 11.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1599064656878-90afba9e81f6?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Academic Flashcards Set.jpg",
     tags: ["Study"]
   },
   {
@@ -201,7 +201,7 @@ const BrowsePage = () => {
     company: "UniBox",
     price: 49.99,
     rating: 4.8,
-    image: "https://images.unsplash.com/photo-1592928303705-7f847b27a4e3?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Hostel Essentials Kit-min.jpg",
     tags: ["Accessories"]
   },
   {
@@ -210,7 +210,7 @@ const BrowsePage = () => {
     company: "CareerBoost",
     price: 5.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1593642532400-2682810df593?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Wireless mouse-min.jpg",
     tags: ["Tech"]
   },
   {
@@ -219,7 +219,7 @@ const BrowsePage = () => {
     company: "BrightBeam",
     price: 8.49,
     rating: 4.4,
-    image: "https://images.unsplash.com/photo-1587033851617-74a976e3f888?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/USB Reading Light.jpg",
     tags: ["Lighting", "Study"]
   },
   {
@@ -228,7 +228,7 @@ const BrowsePage = () => {
     company: "ClearWave",
     price: 49.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1580894908360-7b1b71db10f6?auto=format&fit=crop&w=500&q=80",
+    image: "/assets/products/Noise-Isolating Headphones.jpg",
     tags: ["Audio"]
   }
 ];

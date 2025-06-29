@@ -74,20 +74,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <FontAwesomeIcon icon={faStore} className="w-5 text-center" />
               <span>Browse Products</span>
             </Link>
-            <Link 
-              to="/search" 
-              className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/search')}`}
-            >
-              <FontAwesomeIcon icon={faSearch} className="w-5 text-center" />
-              <span>Search</span>
-            </Link>
-            <Link 
-              to="/categories" 
-              className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/categories')}`}
-            >
-              <FontAwesomeIcon icon={faTags} className="w-5 text-center" />
-              <span>Categories</span>
-            </Link>
+            
           </div>
           
           <div className="px-4 mb-6">

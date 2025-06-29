@@ -3,7 +3,6 @@ import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagg
 import { JwtAuthGuard } from '@auth/guards/jwt-auth.guard';
 import { GetUser } from '@auth/decorators/get-user.decorator';
 import { TransactionService } from './transaction.service';
-import { TransferDto } from './dto/transfer.dto';
 import { TransactionDto } from './dto/transaction.dto';
 
 @ApiTags('transactions')
@@ -26,9 +25,14 @@ export class TransactionController {
   @ApiResponse({ status: 404, description: 'Recipient not found' })
   async transfer(
     @GetUser('id') userId: string,
-    @Body() transferDto: TransferDto,
+    @Body() transactionDto: TransactionDto,
   ): Promise<{ transaction: TransactionDto }> {
-    return this.transactionService.transferFunds(userId, transferDto);
+    return this.transactionService.createTransaction(
+      transactionDto.walletId,
+      transactionDto.amount,
+      transactionDto.type,
+      transactionDto.description
+    );
   }
 
   @Get()
