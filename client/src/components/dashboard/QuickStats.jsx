@@ -7,7 +7,7 @@ const QuickStats = ({ openAddFundsModal }) => {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-gray-500 text-sm">Your Balance</p>
-            <h3 className="text-2xl font-bold">$245.50</h3>
+            <h3 className="text-2xl font-bold">Rs 245.50</h3>
           </div>
           <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
             <i className="fas fa-wallet text-purple-600 text-xl"></i>
@@ -40,7 +40,7 @@ const QuickStats = ({ openAddFundsModal }) => {
         <div className="flex items-center justify-between">
           <div>
             <p className="text-gray-500 text-sm">Mentor Sessions</p>
-            <h3 className="text-2xl font-bold">2 Available</h3>
+            <h3 className="text-2xl font-bold">3 Available</h3>
           </div>
           <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
             <i className="fas fa-users text-blue-600 text-xl"></i>

@@ -46,7 +46,7 @@ const ProductDetailModal = ({ isOpen, onClose, product, addToCart }) => {
             </div>
             
             <div className="mb-6">
-              <span className="text-3xl font-bold">${product.price.toFixed(2)}</span>
+              <span className="text-3xl font-bold">RS {product.price.toFixed(2)}</span>
               <span className="ml-2 text-green-600">In Stock</span>
             </div>
             

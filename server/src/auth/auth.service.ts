@@ -67,6 +67,24 @@ export class AuthService {
     }
   }
 
+  async validateToken(token: string) {
+    try {
+      const decoded = this.jwt.verify(token, this.config.get('JWT_SECRET'));
+      const user = await this.prisma.user.findUnique({
+        where: { id: decoded.sub as string },
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          createdAt: true,
+        },
+      });
+      return user;
+    } catch (error) {
+      return null;
+    }
+  }
+
   async login(dto: LoginDto): Promise<AuthResponseDto> {
     const { email, password } = dto;
 

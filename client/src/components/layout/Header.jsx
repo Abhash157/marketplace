@@ -1,12 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 const Header = ({ toggleSidebar }) => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [user, setUser] = useState(null);
   
   const toggleProfileMenu = () => {
     setIsProfileOpen(!isProfileOpen);
   };
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        try {
+          // console.log('Token:', token);
+          const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+          const response = await axios.get(`${apiUrl}/users/me`, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.message || 'Failed to fetch user data');
+          }
+
+          const userData = await response.json();
+          setUser(userData);
+        } catch (error) {
+          console.error('Failed to fetch user data:', error);
+          // Clear invalid token
+          // localStorage.removeItem('token');
+          setUser(null);
+        }
+      }
+    };
+    fetchUser();
+  }, []);
+  
   return (
     <header className="bg-white shadow-sm py-4 px-6 flex justify-between items-center">
       <div className="flex items-center">
@@ -34,7 +68,9 @@ const Header = ({ toggleSidebar }) => {
             <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
               <i className="fas fa-user text-purple-600"></i>
             </div>
-            <span className="hidden md:inline font-medium">Student</span>
+            <span className="hidden md:inline font-medium">
+              {user ? user.name : 'Guest'}
+            </span>
             <i className={`fas fa-chevron-down text-xs text-gray-500 transition-transform ${isProfileOpen ? 'transform rotate-180' : ''}`}></i>
           </button>
           

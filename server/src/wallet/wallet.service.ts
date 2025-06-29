@@ -30,7 +30,6 @@ export class WalletService {
       id: wallet.id,
       balance: wallet.balance,
       userId: wallet.userId,
-      createdAt: wallet.createdAt,
     };
   }
 
@@ -49,7 +48,6 @@ export class WalletService {
       id: wallet.id,
       balance: wallet.balance,
       userId: wallet.userId,
-      createdAt: wallet.createdAt,
     };
   }
 
@@ -84,7 +82,6 @@ export class WalletService {
       id: wallet.id,
       balance: wallet.balance,
       userId: wallet.userId,
-      createdAt: wallet.createdAt,
     };
   }
 }

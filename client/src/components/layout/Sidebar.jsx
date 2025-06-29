@@ -87,8 +87,8 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <span>Register Startup</span>
             </Link>
             <Link 
-              to="/manage-products" 
-              className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/manage-products')}`}
+              to="/manage" 
+              className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/manage')}`}
             >
               <FontAwesomeIcon icon={faBoxOpen} className="w-5 text-center" />
               <span>Manage Products</span>
@@ -118,13 +118,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
               <FontAwesomeIcon icon={faUsers} className="w-5 text-center" />
               <span>Mentors</span>
             </Link>
-            <Link 
-              to="/sustainability" 
-              className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/sustainability')}`}
-            >
-              <FontAwesomeIcon icon={faLeaf} className="w-5 text-center" />
-              <span>Sustainability</span>
-            </Link>
+           
           </div>
         </div>
         

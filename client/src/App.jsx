@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider } from './contexts/AuthContext';
 import Sidebar from './components/layout/Sidebar';
 import Header from './components/layout/Header';
-import WelcomeBanner from './components/dashboard/WelcomeBanner';
 import QuickStats from './components/dashboard/QuickStats';
 import FeaturedProducts from './components/dashboard/FeaturedProducts';
 import MentorSection from './components/dashboard/MentorSection'; 
@@ -16,6 +15,8 @@ import BrowsePage from './pages/browse/BrowsePage';
 import WalletPage from './pages/wallet/WalletPage';
 import { featuredProducts } from './data/products';
 import { mentors } from './data/mentors';
+import AdminPage from './pages/admin/AdminPage';
+import ManagePage from './pages/manage/ManagePage';
 import MentorsPage from './pages/mentors/MentorsPage';
 import AnalyticsPage from './pages/analytics/AnalyticsPage';
 import Whatsapp from './components/dashboard/Whatasapp';
@@ -43,7 +44,7 @@ function Dashboard() {
       <div className={`flex-1 flex flex-col transition-all duration-300 ${sidebarOpen ? 'ml-0' : 'md:ml-64'}`}>
         <Header toggleSidebar={toggleSidebar} />
         <main className="flex-1 p-6">
-          <WelcomeBanner />
+          {/* <WelcomeBanner /> */}
           <QuickStats openAddFundsModal={() => setAddFundsModalOpen(true)} />
           <FeaturedProducts
             products={featuredProducts}
@@ -84,7 +85,9 @@ function App() {
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mentors" element={<MentorsPage />} />
+          <Route path="/manage" element={<ManagePage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>

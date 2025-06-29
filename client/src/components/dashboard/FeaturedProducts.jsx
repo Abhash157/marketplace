@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FeaturedProducts = ({ 
   products = [
@@ -19,7 +20,7 @@ const FeaturedProducts = ({
     <div className="mb-8">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold text-gray-800">Featured Products</h2>
-        <a href="#" className="text-purple-600 text-sm font-medium">View All</a>
+        <Link to="/browse" className="text-purple-600 text-sm font-medium">View All</Link>
       </div>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
