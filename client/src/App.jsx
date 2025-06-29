@@ -11,6 +11,7 @@ import AddFundsModal from './components/modals/AddFundsModal';
 import ProductDetailModal from './components/modals/ProductDetailModal';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
+import RegisterStartup from './pages/registerStartup/registerStartup';
 import BrowsePage from './pages/browse/BrowsePage';
 import WalletPage from './pages/wallet/WalletPage';
 import { featuredProducts } from './data/products';
@@ -84,6 +85,7 @@ function App() {
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mentors" element={<MentorsPage />} />
+          <Route path="/registerStartup" element={<RegisterStartup />} />
           <Route path="/manage" element={<ManagePage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
