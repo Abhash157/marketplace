@@ -138,15 +138,7 @@ export const featuredProducts = [
     image: "https://images.unsplash.com/photo-1587574293340-b9d9b8438453?auto=format&fit=crop&w=500&q=80",
     description: "Set of 5 vibrant posters to keep your motivation high while studying."
   },
-  {
-    id: 16,
-    name: "Student Planner & Tracker",
-    company: "PlanPro",
-    price: 18.99,
-    rating: 4.7,
-    image: "https://images.unsplash.com/photo-1591035897812-99e3d40bdc3c?auto=format&fit=crop&w=500&q=80",
-    description: "Organize assignments, goals, and routines with this all-in-one planner."
-  },
+  
   {
     id: 17,
     name: "Laptop Cooling Pad",
@@ -203,7 +195,7 @@ export const featuredProducts = [
   },
   {
     id: 23,
-    name: "Resume Template Pack",
+    name: "Wireless Mouse",
     company: "CareerBoost",
     price: 5.99,
     rating: 4.6,

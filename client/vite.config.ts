@@ -21,7 +21,7 @@ export default defineConfig({
     },
     host: '0.0.0.0',
     allowedHosts: [
-      '*.ngrok-free.app',  // ✅ allows any subdomain from ngrok
+      '*.ngrok-free.app',  
     ]
   },
 });

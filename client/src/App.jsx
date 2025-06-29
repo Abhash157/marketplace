@@ -13,6 +13,7 @@ import AddFundsModal from './components/modals/AddFundsModal';
 import ProductDetailModal from './components/modals/ProductDetailModal';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
+import WalletPage from './pages/wallet/WalletPage';
 import { featuredProducts } from './data/products';
 import { mentors } from './data/mentors';
 
@@ -83,6 +84,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/wallet" element={<WalletPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />

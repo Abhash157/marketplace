@@ -16,7 +16,7 @@ const Header = ({ toggleSidebar }) => {
         >
           <i className="fas fa-bars text-purple-600"></i>
         </button>
-        <h1 className="text-2xl font-bold text-gray-800">TechConnect</h1>
+        <h1 className="text-2xl font-bold text-gray-800 bg-no-repeat bg-center bg-cover" style={{backgroundImage: 'url(../../assets/Tech.png)'}}>Tech Connect</h1>
       </div>
       
       <div className="flex items-center space-x-4">

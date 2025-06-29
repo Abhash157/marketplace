@@ -49,7 +49,7 @@ const FeaturedProducts = ({
                 </div>
               </div>
               <div className="mt-3 flex justify-between items-center">
-                <span className="font-bold text-gray-800">${product.price.toFixed(2)}</span>
+                <span className="font-bold text-gray-800">Rs {product.price.toFixed(2)}</span>
                 <button 
                   className="bg-purple-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-purple-700 transition"
                   onClick={(e) => {
