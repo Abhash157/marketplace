@@ -19,8 +19,6 @@ const DashboardLayout: React.FC<{ children?: React.ReactNode }> = ({ children })
   return (
     <div className="min-h-screen bg-gray-100">
       <Header 
-        user={user} 
-        onLogout={logout} 
         toggleSidebar={toggleSidebar}
       />
       <div className="flex pt-16">

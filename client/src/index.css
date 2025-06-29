@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Test styles - should be visible if Tailwind is working */
+.test-tailwind {
+  @apply text-red-500 font-bold text-2xl p-4 bg-yellow-100;
+  content: 'Tailwind CSS is working!';
+}
+
 .gradient-bg {
   background: linear-gradient(135deg, #6B46C1 0%, #3182CE 100%);
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/layout/Sidebar';
 import Header from './components/layout/Header';
 import WelcomeBanner from './components/dashboard/WelcomeBanner';
@@ -9,10 +10,12 @@ import MentorSection from './components/dashboard/MentorSection';
 import Footer from './components/layout/Footer';
 import AddFundsModal from './components/modals/AddFundsModal';
 import ProductDetailModal from './components/modals/ProductDetailModal';
+import LoginPage from './pages/auth/LoginPage';
+import RegisterPage from './pages/auth/RegisterPage';
 import { featuredProducts } from './data/products';
 import { mentors } from './data/mentors';
 
-function App() {
+function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [addFundsModalOpen, setAddFundsModalOpen] = useState(false);
   const [productModalOpen, setProductModalOpen] = useState(false);
@@ -35,7 +38,6 @@ function App() {
     <div className="flex bg-gray-50 min-h-screen">
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       
-      
       <div className={`flex-1 flex flex-col transition-all duration-300 ${
         sidebarOpen ? 'ml-0' : 'md:ml-64'
       }`}>
@@ -49,7 +51,7 @@ function App() {
             openProductModal={openProductModal} 
             addToCart={addToCart}
           />
-          <StartupAnalytics />
+          {/* <StartupAnalytics /> */}
           <MentorSection mentors={mentors} />
         </main>
         
@@ -61,7 +63,7 @@ function App() {
         onClose={() => setAddFundsModalOpen(false)} 
       />
       
-      {selectedProduct && (
+      {selectedProduct && ( 
         <ProductDetailModal 
           isOpen={productModalOpen} 
           onClose={() => setProductModalOpen(false)} 
@@ -73,4 +75,19 @@ function App() {
   );
 }
 
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
+      </Routes>
+    </Router>
+  );
+}
+
 export default App;
+

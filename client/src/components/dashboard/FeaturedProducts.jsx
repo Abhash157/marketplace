@@ -1,6 +1,20 @@
 import React from 'react';
 
-const FeaturedProducts = ({ products, openProductModal, addToCart }) => {
+const FeaturedProducts = ({ 
+  products = [
+    {
+      id: 1,
+      name: 'Sample Product',
+      image: 'https://via.placeholder.com/300',
+      tags: [],
+      price: 0,
+      description: 'Product description',
+      seller: 'Sample Seller'
+    }
+  ], 
+  openProductModal = (product) => console.log('Open product:', product), 
+  addToCart = (product) => console.log('Add to cart:', product) 
+}) => {
   return (
     <div className="mb-8">
       <div className="flex justify-between items-center mb-4">

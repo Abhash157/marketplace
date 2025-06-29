@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const MentorSection = ({ mentors }) => {
+  const [selectedMentor, setSelectedMentor] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+
   const getColorClasses = (color) => {
     switch(color) {
       case 'blue':
@@ -28,6 +31,16 @@ const MentorSection = ({ mentors }) => {
           badge: 'bg-gray-100 text-gray-800'
         };
     }
+  };
+
+  const handleRequestSession = (mentor) => {
+    setSelectedMentor(mentor);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedMentor(null);
   };
 
   return (
@@ -60,7 +73,10 @@ const MentorSection = ({ mentors }) => {
                     </span>
                   ))}
                 </div>
-                <button className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition">
+                <button 
+                  onClick={() => handleRequestSession(mentor)}
+                  className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition"
+                >
                   Request Session
                 </button>
               </div>
@@ -68,6 +84,55 @@ const MentorSection = ({ mentors }) => {
           );
         })}
       </div>
+
+      {/* Contact Modal */}
+      {showModal && selectedMentor && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-md">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-4">
+                <h3 className="text-xl font-bold text-gray-800">Contact Mentor</h3>
+                <button 
+                  onClick={closeModal}
+                  className="text-gray-500 hover:text-gray-700"
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </div>
+              
+              <div className="flex items-center space-x-4 mb-4">
+                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+                <div>
+                  <h3 className="font-bold text-gray-800">{selectedMentor.name}</h3>
+                  <p className="text-sm text-gray-500">{selectedMentor.title}</p>
+                </div>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div>
+                  <p className="text-sm text-gray-500">Email</p>
+                  <p className="font-medium">{selectedMentor.contact.email}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Phone</p>
+                  <p className="font-medium">{selectedMentor.contact.phone}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500">Availability</p>
+                  <p className="font-medium">{selectedMentor.contact.availability}</p>
+                </div>
+              </div>
+              
+              <button 
+                onClick={closeModal}
+                className="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
