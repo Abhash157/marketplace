@@ -1,6 +1,12 @@
 import React from 'react';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const toggleProfileMenu = () => {
+    setIsProfileOpen(!isProfileOpen);
+  };
   return (
     <>
       {/* Mobile overlay */}
@@ -82,15 +88,48 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           </div>
         </div>
         
-        <div className="p-4 border-t">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
-              <i className="fas fa-user text-gray-600"></i>
+        <div className="p-4 mt-auto border-t">
+          <div className="relative">
+            {/* Profile button */}
+            <div 
+              className="flex items-center space-x-3 cursor-pointer hover:bg-gray-50 rounded-lg p-2"
+              onClick={toggleProfileMenu}
+            >
+              <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+                <i className="fas fa-user text-purple-600"></i>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-medium truncate">John Doe</p>
+                <p className="text-xs text-gray-500 truncate">student@university.edu</p>
+              </div>
+              <i className={`fas fa-chevron-up text-xs text-gray-500 transition-transform ${isProfileOpen ? 'transform rotate-180' : ''}`}></i>
             </div>
-            <div className="sidebar-text">
-              <p className="text-sm font-medium">Student User</p>
-              <p className="text-xs text-gray-500">student@university.edu</p>
-            </div>
+            
+            {/* Dropdown menu - opens upward */}
+            {isProfileOpen && (
+              <div 
+                className="absolute bottom-full left-0 right-0 mb-2 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Link
+                  to="/login"
+                  className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsProfileOpen(false)}
+                >
+                  <i className="fas fa-sign-in-alt mr-3 w-5 text-center"></i>
+                  <span>Login</span>
+                </Link>
+                <div className="border-t border-gray-100 my-1"></div>
+                <Link
+                  to="/register"
+                  className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  onClick={() => setIsProfileOpen(false)}
+                >
+                  <i className="fas fa-user-plus mr-3 w-5 text-center"></i>
+                  <span>Register</span>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </div>
