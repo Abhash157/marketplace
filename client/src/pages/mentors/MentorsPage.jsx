@@ -2,12 +2,12 @@
 
 import React, { useEffect, useState } from 'react';
 import { Box, Heading, Input, Spinner, VStack } from '@chakra-ui/react';
-import MentorSection from '@/components/mentors/MentorSection';
+import MentorSection from '../../components/dashboard/MentorSection';
 import Sidebar from '../../components/layout/Sidebar';
 import Header from '../../components/layout/Header';
 import Footer from '../../components/layout/Footer';
 
-export default function MentorsPage() {
+const MentorsPage = () => {
   const [mentors, setMentors] = useState([]);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
@@ -59,3 +59,5 @@ export default function MentorsPage() {
     </>
   );
 }
+
+export default MentorsPage;

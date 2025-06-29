@@ -7,7 +7,7 @@ import WelcomeBanner from './components/dashboard/WelcomeBanner';
 import QuickStats from './components/dashboard/QuickStats';
 import FeaturedProducts from './components/dashboard/FeaturedProducts';
 import StartupAnalytics from './components/dashboard/StartupAnalytics';
-import MentorSection from './components/dashboard/MentorSection';
+// import mentors from './data/mentors';
 import Footer from './components/layout/Footer';
 import AddFundsModal from './components/modals/AddFundsModal';
 import ProductDetailModal from './components/modals/ProductDetailModal';
@@ -16,7 +16,7 @@ import RegisterPage from './pages/auth/RegisterPage';
 import BrowsePage from './pages/browse/BrowsePage';
 import WalletPage from './pages/wallet/WalletPage';
 import { featuredProducts } from './data/products';
-import { mentors } from './data/mentors';
+import MentorsPage from "./pages/mentors/MentorsPage"; 
 
 function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -55,7 +55,7 @@ function Dashboard() {
             addToCart={addToCart}
           />
           {/* <StartupAnalytics /> */}
-          <MentorSection mentors={mentors} />
+          {/* <MentorSection mentors={mentors} /> */}
         </main>
         
         <Footer />
@@ -88,7 +88,7 @@ function App() {
           <Route path="/wallet" element={<WalletPage />} />
           <Route path="/browse" element={<BrowsePage />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/mentors" element={<MentorSection mentors={mentors} />} />
+          <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>

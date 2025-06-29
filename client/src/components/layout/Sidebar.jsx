@@ -44,11 +44,11 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       >
        <div className="p-4 flex items-center space-x-3 border-b">
   <img
-    src="/assets/Tech.png"
+    src="/assets/Tech.jpeg"
     alt="Tech Connect Logo"
-    className="w-20 h-20 rounded-full object-cover"
+    className="w-20 h-20 object-cover"
   />
-  <span className="logo-text text-sm font-bold text-purple-8001 text-purple-100">Tech Connect</span>
+  <span className="logo-text text-sm font-bold text-purple-8001 text-blue-500">Tech Connect</span>
 </div>
 
 
