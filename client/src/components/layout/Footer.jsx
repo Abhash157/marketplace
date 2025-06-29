@@ -5,9 +5,14 @@ const Footer = () => {
     <footer className="bg-white border-t py-6 px-6">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center space-x-2 mb-4 md:mb-0">
-          <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white font-bold" >
-            TC
-          </div>
+          <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center">
+  <img
+    src="/assets/Tech.jpeg" 
+    alt="Logo"
+    className="w-full h-full object-cover"
+  />
+</div>
+
           <span className="text-lg font-bold text-purple-800">Tech Connect</span>
         </div>
         <div className="flex space-x-6">
@@ -24,7 +29,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-6 text-center text-sm text-gray-500">
-        © 2023 UniConnect. All rights reserved. Made with ❤️ for student entrepreneurs.
+        &copy; 2023 Tech Connect. All rights reserved. Made  for student entrepreneurs.
       </div>
     </footer>
   );

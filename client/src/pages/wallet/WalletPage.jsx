@@ -33,7 +33,7 @@ const WalletPage = () => {
         // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 800));
         
-        setBalance(1250.75);
+        setBalance(22455.00);
         setTransactions([
           { id: 1, amount: 1000, type: 'credit', description: 'Initial deposit', date: '2025-06-28T10:30:00', category: 'deposit' },
           { id: 2, amount: -49.99, type: 'debit', description: 'Course purchase', date: '2025-06-27T15:45:00', category: 'education' },

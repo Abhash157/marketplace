@@ -39,7 +39,7 @@ const WhatsappChat = ({
         <div className="w-80 bg-white rounded-lg shadow-lg overflow-hidden transform transition-all">
           <div className="flex items-center justify-between bg-[#25d366] px-4 py-3">
             <div className="flex items-center space-x-2">
-              <img src="/assets/images/Logo.png" alt="Company logo" className="w-6 h-6" />
+              <img src="/assets/Tech.jpeg" alt="Company logo" className="w-6 h-6" />
               <div className="text-black font-bold">{companyName}</div>
             </div>
             <button

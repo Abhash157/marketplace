@@ -15,7 +15,6 @@ import BrowsePage from './pages/browse/BrowsePage';
 import WalletPage from './pages/wallet/WalletPage';
 import { featuredProducts } from './data/products';
 import { mentors } from './data/mentors';
-import AdminPage from './pages/admin/AdminPage';
 import ManagePage from './pages/manage/ManagePage';
 import MentorsPage from './pages/mentors/MentorsPage';
 import AnalyticsPage from './pages/analytics/AnalyticsPage';
@@ -87,7 +86,6 @@ function App() {
           <Route path="/mentors" element={<MentorsPage />} />
           <Route path="/manage" element={<ManagePage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
-          <Route path="/admin" element={<AdminPage />} />
           <Route path="/" element={<Navigate to="/dashboard" replace />} />
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
