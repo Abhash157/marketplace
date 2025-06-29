@@ -38,11 +38,10 @@ const Header = ({ toggleSidebar }) => {
             <i className={`fas fa-chevron-down text-xs text-gray-500 transition-transform ${isProfileOpen ? 'transform rotate-180' : ''}`}></i>
           </button>
           
-          {/* Profile Dropdown */}
           {isProfileOpen && (
             <div 
               className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-              onMouseLeave={() => setIsProfileOpen(false)}
+              onClick={(e) => e.target.closest('.absolute') && setIsProfileOpen(false)}
             >
               <Link
                 to="/login"

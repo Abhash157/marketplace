@@ -80,7 +80,7 @@ export const featuredProducts = [
     company: "ThinkBoard",
     price: 24.99,
     rating: 4.6,
-    image: "https://images.unsplash.com/photo-1611078350231-113f9c46cd65?auto=format&fit=crop&w=500&q=80",
+    image: "https://m.media-amazon.com/images/I/618A0OmuIFL._AC_SL1500_.jpg",
     description: "Compact whiteboard set with markers and eraser — great for brainstorming on the go."
   },
   {
@@ -89,34 +89,26 @@ export const featuredProducts = [
     company: "TimeTrek",
     price: 17.99,
     rating: 4.2,
-    image: "https://images.unsplash.com/photo-1586864387784-1f1bfcdf7db8?auto=format&fit=crop&w=500&q=80",
+    image: "https://hackaday.com/wp-content/uploads/2021/10/pomodoro-800.png?w=800",
     description: "Minimalist timer clock designed for Pomodoro technique and focused study sessions."
   },
   {
-    id: 12,
+    id: 11,
     name: "Custom College Hoodie",
     company: "CampusThreads",
     price: 39.99,
     rating: 4.7,
-    image: "https://images.unsplash.com/photo-1617957742529-4bff23cf68bb?auto=format&fit=crop&w=500&q=80",
+    image: "https://i.etsystatic.com/28034476/r/il/f3144d/5505635872/il_fullxfull.5505635872_7fdc.jpg",
     description: "High-quality, customizable college hoodie with soft fleece and stylish fit."
   },
+
   {
-    id: 13,
-    name: "Monthly Nepali Snack Box",
-    company: "TasteNepal",
-    price: 34.99,
-    rating: 4.9,
-    image: "https://images.unsplash.com/photo-1630932382496-3bbfc436de69?auto=format&fit=crop&w=500&q=80",
-    description: "A curated monthly box filled with authentic Nepali snacks, sweets, and flavors."
-  },
-  {
-    id: 14,
+    id: 12,
     name: "Mini Solar Power Bank",
     company: "SunCharge",
     price: 22.99,
     rating: 4.5,
-    image: "https://images.unsplash.com/photo-1581090700227-1e8d80af49ef?auto=format&fit=crop&w=500&q=80",
+    image: "https://images-cdn.ubuy.com.sa/634004b13bc2bd6a95629d4b-ubuy-online-shopping.jpg",
     description: "Compact solar-powered power bank ideal for students on the move or during load-shedding."
   }
 ];
