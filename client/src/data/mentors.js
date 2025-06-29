@@ -1,7 +1,7 @@
 export const mentors = [
   {
     id: 1,
-    name: "Dr. Sarah Johnson",
+    name: "Kritika ",
     title: "Business Development Expert",
     description: "Former startup founder with 3 successful exits. Specializes in sustainable business models and growth strategies.",
     tags: ["Sustainability", "Marketing", "Funding", "Startups"],
@@ -12,6 +12,9 @@ export const mentors = [
     contact: {
       email: "sarah.johnson@mentor.example",
       phone: "+1 (555) 123-4567",
+      whatsapp: "+15551234567",
+      linkedin: "sarah-johnson-biz",
+      linkedinUrl: "https://linkedin.com/in/sarah-johnson-biz",
       availability: "Mon-Wed, 9am-5pm EST"
     }
   },
@@ -28,6 +31,9 @@ export const mentors = [
     contact: {
       email: "mark.williams@techscale.example",
       phone: "+1 (555) 987-6543",
+      whatsapp: "+15559876543",
+      linkedin: "mark-williams-tech",
+      linkedinUrl: "https://linkedin.com/in/mark-williams-tech",
       availability: "Tue-Thu, 10am-6pm PST"
     }
   },
@@ -44,6 +50,9 @@ export const mentors = [
     contact: {
       email: "lisa.chen@vc.example",
       phone: "+1 (555) 246-8102",
+      whatsapp: "+15552468102",
+      linkedin: "lisa-chen-vc",
+      linkedinUrl: "https://linkedin.com/in/lisa-chen-vc",
       availability: "Mon-Fri, 8am-4pm CST"
     }
   }
