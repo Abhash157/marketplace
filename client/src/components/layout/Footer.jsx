@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="bg-white border-t py-6 px-6">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center space-x-2 mb-4 md:mb-0">
-          <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white font-bold">
-            UC
+          <div className="w-8 h-8 rounded-full gradient-bg flex items-center justify-center text-white font-bold" >
+            TC
           </div>
-          <span className="text-lg font-bold text-purple-800">UniConnect</span>
+          <span className="text-lg font-bold text-purple-800">Tech Connect</span>
         </div>
         <div className="flex space-x-6">
           <a href="#" className="text-gray-600 hover:text-purple-600">About</a>

@@ -42,12 +42,16 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           isOpen ? 'left-0' : '-left-64 md:left-0'
         }`}
       >
-        <div className="p-4 flex items-center space-x-2 border-b">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center text-white font-bold">
-            <FontAwesomeIcon icon={faUser} />
-          </div>
-          <span className="logo-text text-xl font-bold text-purple-800">UniConnect</span>
-        </div>
+       <div className="p-4 flex items-center space-x-3 border-b">
+  <img
+    src="/assets/Tech.png"
+    alt="Tech Connect Logo"
+    className="w-20 h-20 rounded-full object-cover"
+  />
+  <span className="logo-text text-sm font-bold text-purple-8001 text-purple-100">Tech Connect</span>
+</div>
+
+
         
         <div className="flex-1 overflow-y-auto py-4">
           <div className="px-4 mb-6">
@@ -64,7 +68,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <div className="px-4 mb-6">
             <h3 className="sidebar-text text-xs uppercase font-semibold text-gray-500 mb-2">Marketplace</h3>
             <Link 
-              to="/products" 
+              to="/browse" 
               className={`flex items-center space-x-3 p-2 rounded-lg ${isActive('/products')}`}
             >
               <FontAwesomeIcon icon={faStore} className="w-5 text-center" />
